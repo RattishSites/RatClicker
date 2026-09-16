@@ -2,6 +2,7 @@
 <p id="seb">0 doller </p>
 <p id="Rats">1  rat</p>
 <p id="Ratprice"> ratprice = $1</p> 
+<p id="theratter">theratter amount = 0</p>
 
 <img id="dice">
 <style>
@@ -15,10 +16,12 @@
 </style>
 <button onclick="flip()"> Rat up </button>
 <button onclick="buyrat()"> Buy a rat</button>
+<button onclick="theratter()"> +1/s</button>
 <script>
     var number = 0
     var rat = 1
 var dice = document.getElementById("dice");
+var theratteramount = 0
 function Random(max){
     return Math.floor((Math.random() * max) + 1)
 }
@@ -41,6 +44,19 @@ function buyrat(){
      document.getElementById("Ratprice").innerHTML = "ratprice = $"+ratprice
     }
 }
+function theratter(){
+theratteramount += 1;
+          document.getElementById("theratter").innerHTML = "theratter amount = "+theratteramount;
+}
+    if (theratteramount > 0){
+setInterval(function () {(number).innerHTML += theratteramount}, 1000);
+    number += theratteramount;
+
+     document.getElementById("seb").innerHTML = number +" $";
+          document.getElementById("theratter").innerHTML = theratteramount;
+
+    }100;
+
 </script>
     <marquee behavior="scroll">
 <img src="https://media1.tenor.com/m/OkzjdxHhgk4AAAAC/rat-rats.gif" width="100" height="100" alt="Rattable">
