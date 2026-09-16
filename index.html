@@ -1,0 +1,46 @@
+<p id="seb">0 doller </p>
+<p id="Rats">1  rat :c</p>
+<p id="Ratprice"> ratprice = $1</p>
+<img id="dice">
+
+<style>
+    Body {
+        background-color: gray;
+    }
+</style>
+<button onclick="flip()"> Rat up </button>
+<button onclick="rat()"> Rat down</button>
+<button onclick="buyrat()"> Buy</button>
+<script>
+    var number = 0
+    var rat = 1
+var dice = document.getElementById("dice");
+function Random(max){
+    return Math.floor((Math.random() * max) + 1)
+}
+function flip(){
+    number +=  rat;
+
+    document.getElementById("seb").innerHTML = number+" $";
+}
+function rat(){
+    number -= 1
+        document.getElementById("seb").innerHTML = number+" $";
+}
+function buyrat(){
+    if (number >= rat*rat){
+     number -= rat*rat
+     rat += 1
+       var ratprice = rat*rat
+            document.getElementById("seb").innerHTML = number+" $";
+     document.getElementById("Rats").innerHTML = rat+" rats";
+     document.getElementById("Ratprice").innerHTML = "ratprice = $"+ratprice
+    }
+}
+ for(var i=rat; i<10; i++) {
+    }
+</script>
+    <marquee behavior="scroll">
+<img src="https://media1.tenor.com/m/OkzjdxHhgk4AAAAC/rat-rats.gif" width="100" height="100" alt="Rattable">
+</marquee>
+
