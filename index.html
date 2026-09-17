@@ -47,6 +47,11 @@ function rat(){
         document.getElementById("seb").innerHTML = number+" $";
 }
 function buyrat(){
+	   if (localStorage.rat) {
+  localStorage.rat = Number(localStorage.rat) + 1;
+} else {
+  localStorage.rat = 1;
+}
     if (localStorage.clickcount >= rat*rat){
      (localStorage.clickcount) -= rat*rat
      var number = (localStorage.clickcount)
