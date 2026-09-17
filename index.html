@@ -27,17 +27,17 @@
 			border-radius: 3px;
     }
 </style>
+<button onclick="clickCounter()" type="button">money up!</button>
 <button onclick="flip()"> Rat up </button>
 <button onclick="buyrat()"> Buy a rat</button>
 <button onclick="theratter()"> +1/s</button>
 
 <script>
-    var number = 0
     var rat = 1
     var theratteramount = 0
 
 function flip(){
-    number +=  rat;
+   number +=  rat;
 
     document.getElementById("seb").innerHTML = number+" $";
 }
@@ -46,8 +46,9 @@ function rat(){
         document.getElementById("seb").innerHTML = number+" $";
 }
 function buyrat(){
-    if (number >= rat*rat){
-     number -= rat*rat
+    if (localStorage.clickcount >= rat*rat){
+     (localStorage.clickcount) -= rat*rat
+     var number = (localStorage.clickcount)
      rat += 1
        var ratprice = rat*rat
             document.getElementById("seb").innerHTML = number+" $";
@@ -69,9 +70,47 @@ theratteramount += 1;
     },100)};
 
 </script>
+<html>
+<body>
+
+<div id="result"></div>
+
+<script>
+
+
+</script>
+<head>
+<script>
+function clickCounter() {
+    
+  //const x = document.getElementById("result");
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+rat;
+                document.getElementById("seb").innerHTML = number+" $"
+      number = (localStorage.clickcount)
+    } else {
+      localStorage.clickcount = 1;
+    }
+    x.innerHTML = localStorage.clickcount;
+  } else {
+    
+  }
+}
+    var number = clickcount
+</script>
+</head>
+</body>
+</html>
+</script>
+
+    </body>
+</html>
 <a href="https://rattishsites.github.io/RatShop/" class="itwasme">Shop</a>
     <marquee behavior="scroll">
 <img src="https://media1.tenor.com/m/OkzjdxHhgk4AAAAC/rat-rats.gif" width="100" height="100" alt="Rattable">
 </marquee>
+
+
 
 
