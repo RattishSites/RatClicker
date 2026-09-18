@@ -34,7 +34,7 @@
 <button onclick="theratter()"> +1/s</button>
 
 <script>
-    var rat = ratcount
+    var Rat = (localStorage.ratcount)
     var theratteramount = 0
 
 function flip(){
@@ -126,7 +126,7 @@ document.getElementById("demo").innerHTML = localStorage.ratcount;
 function Ratcounter() {
   if (localStorage.ratcount) {
     localStorage.ratcount = Number(localStorage.ratcount)+1;
-	  	Rat = ratcount
+	  	Rat = (localStorage.ratcount)
   } else {
     localStorage.ratcount = 1;
   }
