@@ -110,6 +110,31 @@ function clickCounter() {
 </body>
 </html>
 </script>
+<html>
+<body>
+
+
+<p><button onclick="clickCounter()" type="button"> buy a  street rat </button></p>
+
+<p>street rat amount: <span id="demo"></span></p>
+
+
+
+<script>
+document.getElementById("demo").innerHTML = localStorage.clickcount;
+
+function clickCounter() {
+  if (localStorage.clickcount) {
+    localStorage.clickcount = Number(localStorage.clickcount)+1;
+  } else {
+    localStorage.clickcount = 1;
+  }
+document.getElementById("demo").innerHTML = localStorage.clickcount;
+}
+</script>
+
+</body>
+</html>
 
     </body>
 </html>
